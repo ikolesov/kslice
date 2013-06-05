@@ -13,7 +13,8 @@ if(WIN32)
 	message(STATUS "skipping KViewer standalone on windows")
 	# why: probably the app needs to define something like "VTK_IMPORT_HEADERS" to use .dll's correctly
 else()
-	add_executable( KViewer_desktop KViewer_desktop.cpp ${KV_SRC} )
-	target_link_libraries( KViewer_desktop ${KV_LIBS})
+       #lets comment this for now, go through nighly build at least once, figure out why it breaks
+	#add_executable( KViewer_desktop KViewer_desktop.cpp ${KV_SRC} )
+	#target_link_libraries( KViewer_desktop ${KV_LIBS})
 endif(WIN32)
 
